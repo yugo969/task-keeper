@@ -2,7 +2,7 @@
   min-height: 93vh;
   padding-top: 30px;
   background: #bababa;
-  overflow-x: scroll;
+  overflow-x: auto;
   .listWrapper {
     display: flex;
     height: 100%;
@@ -38,7 +38,7 @@
         }
       }
       .cardWrapper {
-        overflow-y: scroll;
+        overflow-y: auto;
         max-height: 76vh;
         .cardDetail_link {
           text-decoration: none;
@@ -49,6 +49,9 @@
           padding: 10px;
           &_title {
             font-size: 17px;
+          }
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.6);
           }
           &_detail {
             display: none;
@@ -61,13 +64,13 @@
             }
           }
         }
-        .addCard {
+      }
+      .addCard {
           color: #8c8c8c;
           &_link {
             color: #8c8c8c;
           }
         }
-      }
     }
   }
 }
