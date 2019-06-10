@@ -1,4 +1,8 @@
-.cardeditPgae {
+#card-editPage, .cardeditPage {
+  border-radius: 4px;
+  background: #252525d9;
+  border: solid 1px #fff;
+  box-shadow: 4px 4px 0 #3a3a3a96, inset 2px 2px 0 #ffffff5c;
   .cardeditForm {
     max-width: 500px;
     margin: 70px auto 0;

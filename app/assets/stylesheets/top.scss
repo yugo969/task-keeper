@@ -1,18 +1,24 @@
 .topPage {
   min-height: 93vh;
   padding-top: 30px;
-  background: #bababa;
+  background: #0000009e;
   overflow-x: auto;
   .listWrapper {
     display: flex;
     height: 100%;
     align-items: baseline;
     .list {
+      color: #efefef;
       position: relative;
       background: #e2e4e6;
       padding: 10px;
       margin-left: 20px;
       min-width: 250px;
+      border-radius: 4px;
+      background: #252525d9;
+      border: solid 1px #fff;
+      box-shadow: 4px 4px 0 #3a3a3a96, inset 2px 2px 0 #ffffff5c;
+      
       &:last-child {
         margin-right: 20px;
       }
@@ -29,7 +35,8 @@
         &_action {
           .fa-pen, .fa-trash {
             font-size: 18px;
-            color: #8c8c8c;
+            // color: #8c8c8c;
+            color: #a9a9a9;
           }
           
           .fa-trash {
@@ -66,9 +73,9 @@
         }
       }
       .addCard {
-          color: #8c8c8c;
+          color: #a9a9a9;
           &_link {
-            color: #8c8c8c;
+            color: #a9a9a9;
           }
         }
     }
