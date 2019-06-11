@@ -1,5 +1,5 @@
 <!--<div class="modal-dialog" data-keyboard="false">-->
-  <div class="modal-content">
+  <!--<div class="modal-content">-->
     
     <div class="cardeditPage">
       <div class='container'>
@@ -13,11 +13,11 @@
           </button>
           
           <div class="cardeditForm_title">
-            <%= f.label :title %>
+            <%= f.label :タイトル %>
             <%= f.text_field :title, class: "form-control", placeholder: "カード名" %>
           </div>
           <div class="cardeditForm_memo">
-            <%= f.label :memo %>
+            <%= f.label :メモ %>
             <%= f.text_area :memo, class: "form-control", placeholder: "詳細" %>
           </div>
           
@@ -26,10 +26,13 @@
             <%= select :card, :list_id, @lists.map{ |l| [l.title, l.id] }, {}, { class: 'form-control' } %>
           </div>
           
-         <div class="text-center"><%= f.submit "更新する", class: "submitBtn" %></div>
+         <div class="cardeditForm_btnArea">
+           <a class="submit_btn"><%= f.submit "更新する" %>
+           </a>
+         </div>
         <% end %>
       </div>
     </div>
     
-  </div>
+  <!--</div>-->
 <!--</div>-->

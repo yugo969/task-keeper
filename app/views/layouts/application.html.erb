@@ -8,11 +8,13 @@
     
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js" data-turbolinks-track="reload"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js" data-turbolinks-track="reload"></script>
     
   </head>
 
-  <body>
+  <body class="drawer drawer--right">
     <% if flash[:notice] %>
       <div class="alert alert-info"><%= flash[:notice] %></div>
     <% end %>
@@ -24,5 +26,14 @@
       <%= render partial: "layouts/header" %>
     <% end %>
     <%= yield %>
+    
+    <script>
+      $(function() {
+          $('.drawer').drawer();
+          /* Activating Best In Place */
+          // $(".best_in_place").best_in_place();
+      });
+      
+    </script>
   </body>
 </html>

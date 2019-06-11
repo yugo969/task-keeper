@@ -1,15 +1,27 @@
 <header class="header">
   <nav class="nav">
     <ul class="header_menu">
-      <li class="nav-link"><%= current_user.name %>さん</li>
+      <!--<li class="nav-link"><%= current_user.name %>さん</li>-->
       <li class="header_menu_title"><%= link_to "trello-like..", root_path, class: "nav-link" %></li>
       <li>
         <ul class="header_menu_inner">
-
-          <%# リストを作成するリンクは今後開発していくので、今は"#"にしておきます。 %>
-          <li><%= link_to "リスト作成", new_list_path, class: "nav-link listNew" %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
+          <!--<li><%= link_to "リスト作成", new_list_path, class: "nav-link listNew" %></li>-->
+          <!--<li><%= link_to "ログアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>-->
         </ul>
+        
+        <button type="button" class="drawer-toggle drawer-hamburger">
+            <span class="sr-only">toggle navigation</span>
+            <span class="drawer-hamburger-icon"></span>
+        </button>
+        
+        <nav class="drawer-nav">
+          <ul class="drawer-menu">
+              <li class="nav-link drawer-menu-item"><%= current_user.name %>さん</li>
+              <li><%= link_to "リスト作成", new_list_path, class: "drawer-menu-item nav-link listNew" %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, class: "drawer-menu-itemnav-link", method: :delete %></li>
+          </ul>
+        </nav>
+        
       </li>
     </ul>
   </nav>

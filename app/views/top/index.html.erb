@@ -3,7 +3,8 @@
     <% @lists.each do |list| %>
       <div class="list">
         <div class="list_header">
-          <h2 class="list_header_title"><%= list.title %></h2>
+          <!--<h2 class="list_header_title"><%= list.title %></h2>-->
+          <h2 class="list_header_title"><%= best_in_place list, :title, :as => :input %></h2>
           
           <div class="list_header_action">
             <%= link_to content_tag(:i, '', class: 'fas fa-trash'), list, method: :delete, data: { confirm: "#{list.title}を削除して大丈夫ですか?" } %>

@@ -1,9 +1,11 @@
 .header {
   background: #2c2d2d;
-  padding: 10px;
+  // padding: 10px;
+  height: 60px;
   .nav {
     .header_menu {
       display: flex;
+      height: 60px;
       width: 100%;
       position: relative;
       margin: 0;
@@ -20,7 +22,12 @@
         color: #fff;
         a {
           color: #fff;
+          &.nav-link {
+            display: block;
+            /* padding: 0.5rem 1rem; */
+          }
         }
+        
       }
       &_title {
         position: absolute;
