@@ -4,7 +4,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
   background-color: #252525d9;
   
   .topPage {
@@ -16,10 +16,19 @@ body {
       display: flex;
       flex: 0 0 auto;
       padding-top: 10px;
+      padding-bottom: 10px;
       height: calc(100% - 0px);
       align-items: baseline;
       // position: relative;
       // z-index: -1;
+      &:after {
+        content: '';
+        display: flex;
+        flex: 0 0 10px;
+        /* justify-self: stretch; */
+        align-self: stretch;
+        padding: 0px 10px;
+      }
       .list {
         color: #efefef;
         display: flex;
@@ -35,9 +44,10 @@ body {
         border: solid 1px #fff;
         box-shadow: 4px 4px 0 #3a3a3a96, inset 2px 2px 0 #ffffff5c;
         
-        &:last-child {
-          margin-right: 20px;
-        }
+        // &:last-child {
+        //   margin-right: 20px;
+        // }
+        
         &_header {
           margin-bottom: 20px;
           display: flex;
