@@ -1,7 +1,7 @@
 .header {
   height: 60px;
   width: 100%;
-  background: #2c2d2d;
+  // background: #2c2d2d;
   position: relative;
   top: 0;
   left: 0;
@@ -12,9 +12,11 @@
       height: 60px;
       width: 100%;
       position: relative;
+      background: #2c2d2d;
       margin: 0;
       padding: 0;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
       align-items: center;
       .header_menu_title {
         a {
@@ -34,10 +36,13 @@
         
       }
       &_title {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        flex: 0 0 auto;
+        align-self: center;
+        // position: absolute;
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%, -50%);
         font-size: 1.5rem;
         white-space: nowrap;
         font-weight: bold;

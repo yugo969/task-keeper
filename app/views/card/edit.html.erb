@@ -1,5 +1,14 @@
 <div class="cardeditPgae">
   <div class='container'>
+    
+    <% if flash[:notice] %>
+      <div class="alert alert-info"><%= flash[:notice] %></div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger"><%= flash[:alert] %></div>
+    <% end %>
+      
+      
     <%= form_with model: @card, url: { action: :update }, html: { class: 'cardeditForm' } do |f| %>
       <% if @card.errors.any? %>
         <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
