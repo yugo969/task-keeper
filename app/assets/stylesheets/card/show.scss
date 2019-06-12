@@ -6,23 +6,31 @@ div#user-modal.show {
 
     .carddetailPage {
       .container {
+        word-break: break-word;
         padding: 0 1.5rem;
         .cardContents {
           margin: 40px auto 0;
           max-width: 600px;
+          i.far.fa-times-circle.fa-lg {
+            color: #efefef;
+            text-shadow: none;
+          }
           &_title {
             h2 {
               font-size: 22px;
             }
           }
           &_title, &_memo, &_listStatus {
+            width: 100%;
+            word-wrap: break-word;
+            overflow: hidden;
             border-bottom: 1px solid #ccc;
             margin-bottom: 30px;
             label {
               font-size: 0.8rem;
             }
             label + div {
-              height: 2rem;
+              min-height: 2rem;
             }
           }
           &_btnArea {

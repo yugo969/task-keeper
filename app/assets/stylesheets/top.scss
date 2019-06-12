@@ -1,83 +1,108 @@
-.topPage {
-  min-height: 93vh;
-  padding-top: 30px;
-  background: #0000009e;
-  overflow-x: auto;
-  .listWrapper {
-    display: flex;
-    height: 100%;
-    align-items: baseline;
-    .list {
-      color: #efefef;
-      position: relative;
-      background: #e2e4e6;
-      padding: 10px;
-      margin-left: 20px;
-      min-width: 250px;
-      border-radius: 4px;
-      background: #252525d9;
-      border: solid 1px #fff;
-      box-shadow: 4px 4px 0 #3a3a3a96, inset 2px 2px 0 #ffffff5c;
-      
-      &:last-child {
-        margin-right: 20px;
-      }
-      &_header {
-        margin-bottom: 20px;
+body {
+  display: flex;
+  flex: 0 0 60px;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding-bottom: 10px;
+  background-color: #252525d9;
+  
+  .topPage {
+    height: calc(100% - 70px);
+    // padding-top: 30px;
+    // padding: 70px 0 0px;
+    overflow-x: auto;
+    .listWrapper {
+      display: flex;
+      flex: 0 0 auto;
+      padding-top: 10px;
+      height: calc(100% - 0px);
+      align-items: baseline;
+      // position: relative;
+      // z-index: -1;
+      .list {
+        color: #efefef;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        &_title {
-          font-size: 20px;
-          margin: 0;
-        }
+        flex-direction: column;
+        position: relative;
+        padding: 10px;
+        margin-left: 20px;
+        width: 250px;
+        min-width: 250px;
+        max-height: calc(100% - 4px);
+        border-radius: 4px;
+        background: #252525d9;
+        border: solid 1px #fff;
+        box-shadow: 4px 4px 0 #3a3a3a96, inset 2px 2px 0 #ffffff5c;
         
-        &_action {
-          .fa-pen, .fa-trash {
-            font-size: 18px;
-            // color: #8c8c8c;
-            color: #a9a9a9;
+        &:last-child {
+          margin-right: 20px;
+        }
+        &_header {
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &_title {
+            font-size: 20px;
+            margin: 0;
           }
           
-          .fa-trash {
-            margin-right: 10px;
+          &_action {
+            .fa-pen, .fa-trash {
+              font-size: 18px;
+              // color: #8c8c8c;
+              color: #a9a9a9;
+            }
+            
+            .fa-trash {
+              margin-right: 10px;
+            }
           }
         }
-      }
-      .cardWrapper {
-        overflow-y: auto;
-        max-height: 76vh;
-        .cardDetail_link {
-          text-decoration: none;
-          color: #323232;
-        }
-        .card {
-          margin-bottom: 10px;
-          padding: 10px;
-          &_title {
-            font-size: 17px;
-          }
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.6);
-          }
-          &_detail {
-            display: none;
-            &.is-exist {
-              display: block;
-              color: #999;
-              & > i {
-                display: block;
+        .cardWrapper {
+          overflow-y: auto;
+          // max-height: 75vh;
+          .cardDetail_link {
+            text-decoration: none;
+            color: #323232;
+            & +.cardDetail_link {
+              .card {
+                margin-top: 10px;
+                // padding: 10px;
+              }
+            }
+            .card {
+              // margin-bottom: 10px;
+              padding: 10px;
+              &_title {
+                font-size: 17px;
+              }
+              &:hover {
+                background-color: rgba(255, 255, 255, 0.6);
+              }
+              &_detail {
+                display: none;
+                &.is-exist {
+                  display: block;
+                  color: #999;
+                  & > i {
+                    display: block;
+                  }
+                }
               }
             }
           }
         }
-      }
-      .addCard {
-          color: #a9a9a9;
-          &_link {
+        .addCard {
             color: #a9a9a9;
+            padding-top: 10px;
+            &_link {
+              color: #a9a9a9;
+            }
           }
-        }
+      }
     }
   }
+  
 }
