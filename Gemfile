@@ -70,4 +70,4 @@ gem 'devise'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem "font-awesome-sass"
-gem "best_in_place"
+gem 'best_in_place', '~> 3.0.1'

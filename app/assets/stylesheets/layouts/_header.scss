@@ -18,12 +18,10 @@
       justify-content: center;
       align-items: center;
       align-items: center;
-      .header_menu_title {
-        a {
-              color: #00bba4;
-        }
-      }
+
       li {
+        height: 80px;
+        line-height: 80px;
         list-style: none;
         color: #fff;
         a {
@@ -31,6 +29,7 @@
           &.nav-link {
             display: block;
             /* padding: 0.5rem 1rem; */
+            padding: 0;
           }
         }
         
@@ -39,6 +38,7 @@
         display: flex;
         flex: 0 0 auto;
         align-self: center;
+        color: #00bba4;
         // position: absolute;
         // left: 50%;
         // top: 50%;
@@ -47,17 +47,38 @@
         white-space: nowrap;
         font-weight: bold;
       }
-      &_inner {
+      button.drawer-toggle  {
+        flex-direction: row;
+      }
+      .drawer-nav {
         display: flex;
-        padding: 0;
-        align-items: center;
-        .listNew {
-          &:after {
-            font-family: "Font Awesome 5 Free";
-            content: "\f044";
-            display: inline-block;
-            margin-left: 10px;
-            font-size: 20px;
+        justify-content: center;
+        .drawer-menu {
+          height: 100vh;
+          width: 60%;
+          align-content: space-around;
+          li {
+            height: 80px;
+            line-height: 80px;
+            .listNew{
+              &:before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f044";
+                display: inline-block;
+                margin-right: 0.5rem;
+                font-size: 20px;
+              }
+            }
+            .logOut{
+              &:before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f2f5";
+                display: inline-block;
+                margin-right: 0.5rem;
+                font-size: 20px;
+                font-weight: 900;
+              }
+            }
           }
         }
       }
