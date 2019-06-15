@@ -59,4 +59,7 @@
 #listNew-modal.show {
     display: flex!important;
 }
+.modal-backdrop.show {
+  z-index: 1070;
+}
 

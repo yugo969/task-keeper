@@ -7,6 +7,7 @@
 #user-modal.show{
   
   #card-editPage {
+    color: #efefef;
     border-radius: 4px;
     background: #252525d9;
     border: solid 1px #fff;
@@ -25,6 +26,10 @@
         i.far.fa-times-circle.fa-lg {
           color: #efefef;
           text-shadow: none;
+          line-height: 32px;
+          // &:before{
+          //     line-height: 32px;
+          //   }
         }
         &_title {
           h2 {
