@@ -12,66 +12,65 @@
     border: solid 1px #fff;
     box-shadow: 4px 4px 0 #3a3a3a96, inset 2px 2px 0 #ffffff5c;
     
-    .cardeditForm {
-      max-width: 600px;
-      margin: 40px auto 0;
-      &_title, &_memo {
-        margin-bottom: 30px;
-      }
-
-      // .cardContents {
-      //   margin: 40px auto 0;
-      //   max-width: 600px;
-      i.far.fa-times-circle.fa-lg {
-        color: #efefef;
-        text-shadow: none;
-      }
-      &_title {
-        h2 {
-          font-size: 22px;
-          height: 2rem;
+    .container {
+      word-break: break-word;
+      padding: 0 1.5rem;
+      .cardeditForm {
+        max-width: 600px;
+        margin: 40px auto 0;
+        &_title, &_memo {
+          margin-bottom: 30px;
         }
-      }
-      &_title, &_memo, &_listStatus {
-        width: 100%;
-        word-wrap: break-word;
-        overflow: hidden;
-        margin-bottom: 30px;
-        label {
-          font-size: 0.8rem;
+  
+        i.far.fa-times-circle.fa-lg {
+          color: #efefef;
+          text-shadow: none;
         }
-        label + div {
-          min-height: 2rem;
+        &_title {
+          h2 {
+            font-size: 22px;
+            height: 2rem;
+          }
         }
-      }
-      &_btnArea {
-        margin:  40px auto 20px;
-        text-align: center;
-        & > a {
-          display: block;
-          &.submit_btn {
-            max-width: 200px;
-            margin: 0 auto;
-            background: #026aa7;
-            padding: 7px;
-            border-radius: 22px;
-            color: #fff;
-            transition: opacity .5s;
-            text-decoration: none;
-            input {
+        &_title, &_memo, &_listStatus {
+          width: 100%;
+          word-wrap: break-word;
+          overflow: hidden;
+          margin-bottom: 30px;
+          label {
+            font-size: 0.8rem;
+          }
+          label + div {
+            min-height: 2rem;
+          }
+        }
+        &_btnArea {
+          margin:  40px auto 20px;
+          text-align: center;
+          & > a {
+            display: block;
+            &.submit_btn {
+              max-width: 200px;
+              margin: 0 auto;
+              background: #026aa7;
+              padding: 7px;
+              border-radius: 22px;
               color: #fff;
-              border: none;
-              background: none;
-              padding: none;
-            }
-            &:hover {
-              opacity: .7;
+              transition: opacity .5s;
+              text-decoration: none;
+              input {
+                color: #fff;
+                border: none;
+                background: none;
+                padding: none;
+              }
+              &:hover {
+                opacity: .7;
+              }
             }
           }
         }
       }
-      // }
-      
     }
     
   }

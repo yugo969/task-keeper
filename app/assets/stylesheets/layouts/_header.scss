@@ -1,3 +1,12 @@
+.drawer--right.drawer-open {
+  .drawer-hamburger {
+    right: 0!important;
+  }
+  .drawer-overlay {
+    z-index: 1060;
+  }
+}
+
 .header {
   height: 60px;
   width: 100%;
@@ -7,6 +16,7 @@
   left: 0;
 
   .nav {
+    z-index: 1070;
     .header_menu {
       display: flex;
       height: 60px;
