@@ -1,4 +1,4 @@
-div#user-modal.show {
+div#user-modal.show, #listNew-modal.show {
   display: flex!important;
   .modal-dialog {
     flex: 0 100%;

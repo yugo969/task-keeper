@@ -12,12 +12,15 @@
         <nav class="drawer-nav">
           <ul class="drawer-menu">
               <li><%= current_user.name %>さん</li>
-              <li><%= link_to "リスト作成", new_list_path, class: "drawer-menu-item nav-link listNew" %></li>
+              <li><%= link_to "リスト作成", new_list_path, remote: true, class: "drawer-menu-item nav-link listNew" %></li>
+              
               <li><%= link_to "ログアウト", destroy_user_session_path, class: "drawer-menu-item nav-link logOut", method: :delete %></li>
           </ul>
         </nav>
+        
         
       </li>
     </ul>
   </nav>
 </header>
+<div id="listNew-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true"></div>

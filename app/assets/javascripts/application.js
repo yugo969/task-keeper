@@ -16,6 +16,6 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require drawer
-
+//= require best_in_place
+//= require bip
 //= require_tree .
