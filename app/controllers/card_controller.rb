@@ -1,8 +1,8 @@
 class CardController < ApplicationController
-  before_action :set_card, only: %i(show edit update destroy)
+  before_action :set_card, only: %i(new show edit update destroy)
   before_action :set_lists, only: %i(new edit)
   def new
-    @card = Card.new
+    @card = Card.new(list_id: params[:list_id])
     @list = List.find_by(id: params[:list_id])
   end
 
