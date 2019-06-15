@@ -1,5 +1,6 @@
 class CardController < ApplicationController
   before_action :set_card, only: %i(show edit update destroy)
+  before_action :set_lists, only: %i(new edit)
   def new
     @card = Card.new
     @list = List.find_by(id: params[:list_id])
@@ -20,7 +21,7 @@ class CardController < ApplicationController
   end
   
   def edit
-    @lists = List.where(user: current_user)
+
   end
   def update
     if @card.update_attributes(card_params)
@@ -40,8 +41,10 @@ class CardController < ApplicationController
     def card_params
       params.require(:card).permit(:title, :memo, :list_id)
     end
-    
     def set_card
       @card = Card.find_by(id: params[:id])
+    end
+    def set_lists
+      @lists = List.where(user: current_user)
     end
 end

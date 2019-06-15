@@ -3,7 +3,7 @@
     <% @lists.each do |list| %>
       <div class="list">
         <div class="list_header">
-          <!--<h2 class="list_header_title"><%= list.title %></h2>-->
+          <!--<h2 class="list_header_title"><%#= list.title %></h2>-->
           <h2 class="list_header_title"><%= best_in_place list, :title, :url => list_path(list) %></h2>
           
           <div class="list_header_action">
@@ -29,7 +29,8 @@
         </div>
         <div class="addCard">
             <i class="far fa-plus-square"></i>
-            <%= link_to "さらにカードを追加", new_list_card_path(list), class: "addCard_link" %>
+            <%#= link_to "さらにカードを追加", new_list_card_path(list), class: "addCard_link" %>
+            <%= link_to 'さらにカードを追加', new_list_card_path(list), remote: true, class:"addCard_link" %>
           </div>
         
       </div>

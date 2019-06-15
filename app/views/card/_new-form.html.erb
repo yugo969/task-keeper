@@ -1,0 +1,47 @@
+<div class="modal-dialog" data-keyboard="false">
+  <div id="cardnewPgae" class="modal-content">
+    
+    <div class="cardeditPage cardnewPgae">
+      <div class='container'>
+        <%= form_with model: @card, url: { action: :create }, html: { class: 'cardeditForm cardnewForm' } do |f| %>
+        
+          <%= f.hidden_field :list_id, value: @list.id %>
+        
+          <% if @card.errors.any? %>
+            <p class="text-danger"><%= @card.errors.messages %></p>
+          <% end %>
+          
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!--<span aria-hidden="true">&times;</span>-->
+            <i class="far fa-times-circle fa-lg" aria-hidden="true"></i>
+          </button>
+          
+          <div class="cardeditForm_title cardnewForm_title">
+            <%= f.label :タイトル %>
+            <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "カード名" %>
+          </div>
+          <div class="cardeditForm_memo cardnewForm_memo">
+            <%= f.label :メモ %>
+            <%= f.text_area :memo, autofocus: true, class: "form-control", placeholder: "詳細" %>
+          </div>
+          
+          
+          <div class="cardeditForm_memo">
+            <label>リスト名</label>
+            <%= select :card, :list_id, @lists.map{ |l| [l.title, l.id] }, {}, { class: 'form-control' } %>
+          </div>
+          
+ 
+ 
+ 
+          
+         <div class="cardeditForm_btnArea cardnewForm_btnArea">
+           <a class="submit_btn"><%= f.submit "作成する" %>
+           </a>
+         </div>
+        <% end %>
+      </div>
+    </div>
+    
+  </div>
+</div>
