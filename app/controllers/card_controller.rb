@@ -1,6 +1,6 @@
 class CardController < ApplicationController
-  before_action :set_card, only: %i(new show edit update destroy)
-  before_action :set_lists, only: %i(new edit)
+  before_action :set_card, only: %i(new create show edit update destroy)
+  before_action :set_lists, only: %i(new create edit update)
   def new
     @card = Card.new(list_id: params[:list_id])
     @list = List.find_by(id: params[:list_id])
@@ -8,6 +8,7 @@ class CardController < ApplicationController
 
   def create
     @card = Card.new(card_params)
+    @list = List.find_by(id: params[:list_id])
     if @card.save
       redirect_to :root
     else

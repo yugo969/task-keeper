@@ -36,6 +36,7 @@ body {
         color: #efefef;
         display: flex;
         flex-direction: column;
+        align-self: flex-start;
         // position: relative;
         padding: 10px;
         margin-top: 20px;
@@ -46,7 +47,6 @@ body {
         max-height: calc(100% - 40px);
         border-radius: 4px;
         background: #252525d9;
-        border: solid 1px #fff;
         border: solid 1px #ece;
         // box-shadow: 4px 4px 0 #3a3a3a96, inset 2px 2px 0 #ffffff5c;
         
@@ -55,18 +55,20 @@ body {
         // }
         
         &_header {
-          margin-bottom: 20px;
+          margin-bottom: 12px;
           display: flex;
           flex: 0 0 24px;
           align-items: center;
           justify-content: space-between;
           &_title {
+            flex: 0 0 77%;
             font-size: 20px;
             margin: 0;
             
           }
           
           &_action {
+            margin-left: auto;
             .fa-pen, .fa-trash {
               font-size: 18px;
               // color: #8c8c8c;
