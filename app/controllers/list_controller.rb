@@ -1,5 +1,5 @@
 class ListController < ApplicationController
-  
+  respond_to :html, :json
   before_action :set_list, only: %i(edit update destroy)
   
   def new
@@ -21,13 +21,30 @@ class ListController < ApplicationController
   end
   
   def update
-    if @list.update_attributes(list_params)
-      redirect_to :root
-    else
-      @list.valid?
-      render action: :edit
-    end
+    @list.update_attributes(list_params)
+    respond_with @list, :location => root_path
+    
+    # if @list.update_attributes(list_params)
+      
+    #   redirect_to :root
+    # else
+    #   @list.valid?
+    #   render action: :edit
+    # end
+    
+    # respond_to do |format|
+    #   if @list.update_attributes(list_params)
+    #     format.html { redirect_to(:root, notice: "User was successfully updated.") }
+    #     format.json { respond_with_bip(@list) }
+    #   else
+    #     @list.valid?
+    #     format.html { render action: :edit }
+    #     format.json { respond_with_bip(@list) }
+    #   end
+    # end
+    
   end
+  
   
   def destroy
     @list.destroy

@@ -9,7 +9,7 @@
           <% end %>
           <%= f.label :タイトル %>
           <%= f.text_field :title, autofocus: true, class: "form-control listName", placeholder: "リスト名" %>
-          <div class="text-center"><%= f.submit "保存する", class: "submitBtn" %></div>
+          <div class="text-center"><%= f.submit "保存する", class: "submitBtn", data: { turbolinks: false } %></div>
         <% end %>
       
       </div>

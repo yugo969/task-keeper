@@ -1,8 +1,7 @@
 <div class='signinPage'>
   <div class='container'>
-    <h2 class="title">ログイン</h2>
-    <div class="text-center m-3">or</div>
-   <div class="text-center"><%= render "devise/shared/links" %></div>
+    <h2 class="title">ログインしてください</h2>
+    
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group">
         <%= f.label :email %><br />
@@ -18,5 +17,7 @@
         <%= f.submit "ログインする", class: "loginBtn" %>
       </div>
     <% end %>
+    <div class="text-center">or</div>
+    <div class="text-center"><%= render "devise/shared/links" %></div>
   </div>
 </div>
