@@ -4,3 +4,9 @@
     font-size: 0.8rem;
     margin-right: auto;
 }
+.modal.fade.show {
+    display: flex;
+    height: 100%;
+    align-self: center;
+    z-index: 1071!important;
+}

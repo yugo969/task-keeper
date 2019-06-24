@@ -72,3 +72,4 @@ gem 'jquery-rails'
 gem "font-awesome-sass"
 gem 'best_in_place', '~> 3.0.1'
 gem 'responders'
+gem 'data-confirm-modal'
