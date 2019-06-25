@@ -19,7 +19,7 @@
       <div class="form-group">
         <%= f.label :password %>
         <% if @minimum_password_length %>
-        <em>  ( <%= @minimum_password_length %>文字以上入力してください )</em>
+        <em>  ( <%= @minimum_password_length %>文字以上 )</em>
         <% end %><br />
         <%= f.password_field :password, class: "form-control", placeholder:"パスワードを入力してください", autocomplete: "off" %>
       </div>
