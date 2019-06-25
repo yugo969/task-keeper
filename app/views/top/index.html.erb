@@ -4,7 +4,7 @@
       <div class="list">
         <div class="list_header">
           <!--<h2 class="list_header_title"><%#= list.title %></h2>-->
-          <h2 class="list_header_title"><%= best_in_place list, :title, :class => "bio_input_field", :type => :textarea, :html_attrs => {:wrap => "soft", :maxlength => 50, :cols=> 12}, :url => list_path(list) %></h2>
+          <h2 class="list_header_title"><%= best_in_place list, :title, :class => "bio_input_field", :as => :textarea, :html_attrs => {:wrap => "soft", :maxlength => 50, :cols=> 12, :rows => 2}, :url => list_path(list) %></h2>
     
           <div class="list_header_action">
             <%= link_to content_tag(:i, '', class: 'fas fa-trash'), list, method: :delete, title: '確認', data: { confirm: "<i class='fa fa-exclamation-circle'></i> リスト: #{list.title} を削除します。よろしいですか？" } %>

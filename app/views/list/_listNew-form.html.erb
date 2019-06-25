@@ -5,7 +5,11 @@
       <div class="container">
         <%= form_with model: @list, url: { action: :create }, class: "new_list" do |f| %>
           <% if @list.errors.any? %>
-            <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
+            <p class="text-danger">
+              <% @list.errors.full_messages.each do |error_message|%>
+                <%= error_message %></br>
+              <% end %>
+            </p> 
           <% end %>
           <%= f.label :タイトル %>
           <%= f.text_field :title, autofocus: true, class: "form-control listName", placeholder: "リスト名" %>

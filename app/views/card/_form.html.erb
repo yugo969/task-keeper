@@ -11,9 +11,11 @@
             <i class="far fa-times-circle fa-lg" aria-hidden="true"></i>
           </button>
           
-                <% if @card.errors.any? %>
-        <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
-      <% end %>
+          <p class="text-danger">
+            <% @card.errors.full_messages.each do |error_message|%>
+              <%= error_message %></br>
+            <% end %>
+          </p> 
           
           <div class="cardContents_title">
             <label>タイトル</label>

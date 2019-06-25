@@ -5,8 +5,15 @@
       <div class="container">
         <%= form_with model: @list, url: { action: :update }, html: { class: 'new_list' } do |f| %>
           <% if @list.errors.any? %>
-            <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
+            <p class="text-danger">
+              <% @list.errors.full_messages.each do |error_message|%>
+                <%= error_message %></br>
+              <% end %>
+            </p> 
+            <!--render_withの影響でerror時edit.htmlにいkので応急処置-->
+            <!--<p class="text-danger">Titleは1~50文字で入力してください</p>-->
           <% end %>
+          
           <%= f.label :タイトル %>
           <%= f.text_field :title, autofocus: true, class: "form-control listName", placeholder: "リスト名" %>
           <div class="text-center"><%= f.submit "保存する", class: "submitBtn", data: { turbolinks: false } %></div>

@@ -2,7 +2,11 @@
   <div class='container'>
     <%= form_with model: @card, url: { action: :update }, html: { class: 'cardeditForm' } do |f| %>
       <% if @card.errors.any? %>
-        <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
+        <p class="text-danger">
+          <% @card.errors.full_messages.each do |error_message|%>
+            <%= error_message %></br>
+          <% end %>
+        </p> 
       <% end %>
       
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
