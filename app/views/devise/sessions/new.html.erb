@@ -4,6 +4,25 @@
     
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     
+      <!--<%# if notice %>-->
+      <!--  <div class="alert alert-info alert-dismissible" role="alert">-->
+      <!--    <button type="button" class="close" data-dismiss="alert">-->
+      <!--      <span aria-hidden="true">&times;</span>-->
+      <!--      <span class="sr-only">close</span>-->
+      <!--    </button>-->
+      <!--    <%#= notice %>-->
+      <!--  </div>-->
+      <!--<%# end %>-->
+      <% if alert %>
+        <div class="alert alert-danger error_field" role="alert">
+          <!--<button type="button" class="close" data-dismiss="alert">-->
+          <!--  <span aria-hidden="true">&times;</span>-->
+          <!--  <span class="sr-only">close</span>-->
+          <!--</button>-->
+            <p class="text-danger"><%= alert %></p>
+        </div>
+      <% end %>
+    
       <div class="form-group">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email", placeholder: "emailを入力してください" %>
@@ -15,7 +34,7 @@
       </div>
 
       <div class="text-center">
-        <%= f.submit "ログインする", class: "loginBtn" %>
+        <%= f.submit "ログインする", class: "loginBtn", data: {"turbolinks" => false} %>
       </div>
     <% end %>
     <div class="text-center">or</div>

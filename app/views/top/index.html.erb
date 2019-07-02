@@ -4,7 +4,7 @@
       <div class="list">
         <div class="list_header">
           <!--<h2 class="list_header_title"><%#= list.title %></h2>-->
-          <h2 class="list_header_title"><%= best_in_place list, :title, :class => "bio_input_field", :as => :textarea, :html_attrs => {:wrap => "soft", :maxlength => 50, :cols=> 12, :rows => 2}, :url => list_path(list) %></h2>
+          <h2 class="list_header_title"><%= best_in_place list, :title, :class => "bio_input_field", :as => :textarea, :html_attrs => {:wrap => "soft", :maxlength => 50, :cols=> 12, :rows => 2}, :url => list_path(list), :ok_button => '保存', :cancel_button => '破棄'  %></h2>
     
           <div class="list_header_action">
             <%= link_to content_tag(:i, '', class: 'fas fa-trash'), list, method: :delete, title: '確認', data: { confirm: "<i class='fa fa-exclamation-circle'></i> リスト: #{list.title} を削除します。よろしいですか？" } %>
@@ -29,9 +29,7 @@
         </div>
         <div class="addCard">
   
-            <!--<i class="far fa-plus-square"></i>-->
             <i class="fas fa-plus"></i>
-            <%#= link_to "さらにカードを追加", new_list_card_path(list), class: "addCard_link" %>
             <%= link_to 'さらにカードを追加', new_list_card_path(list), remote: true, class:"addCard_link" %>
           </div>
         

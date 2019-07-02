@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Trello-like..</title>
+    <title>Task keeper</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag 'application', media: 'all'%>
+    <%#= javascript_include_tag 'application'%>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js" data-turbolinks-track="reload"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js" data-turbolinks-track="reload"></script>
@@ -15,12 +17,12 @@
   </head>
 
   <body class="drawer drawer--right cover">
-    <% if flash[:notice] %>
-      <div class="alert alert-info"><%= flash[:notice] %></div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="alert alert-danger"><%= flash[:alert] %></div>
-    <% end %>
+    <%# if flash[:notice] %>
+      <!--<div class="alert alert-info"><%#= flash[:notice] %></div>-->
+    <%# end %>
+    <%# if flash[:alert] %>
+      <!--<div class="alert alert-danger"><%#= flash[:alert] %></div>-->
+    <%# end %>
     
     <% if user_signed_in? %>
       <%= render partial: "layouts/header" %>
@@ -30,12 +32,12 @@
     <div id="listNew-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true"></div>
     <div id="user-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
     
-    <script>
+    <script data-turbolinks-eval="false">
 
-      $(document).on('turbolinks:load', function() {
+      $(document).on('ready turbolinks:load', function() {
           $('.drawer').drawer();
       });
-      
+
     </script>
     
   </body>

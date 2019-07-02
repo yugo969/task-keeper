@@ -1,11 +1,3 @@
-# ja:
-#   activerecord:
-#     attributes:
-#       user:
-#         name: "お名前"
-#         password: "パスワード"
-#         password_confirmation: "パスワード確認"
-#         email: "メールアドレス"
 ja:
   activerecord:
     attributes:
@@ -13,6 +5,7 @@ ja:
         name: "お名前"
         password: "パスワード"
         password_confirmation: "パスワード確認"
+        current_password: "現在のパスワード"
         email: "メールアドレス"
       list:
         title: "タイトル"

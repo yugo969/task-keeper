@@ -34,7 +34,7 @@ class ListController < ApplicationController
     
     respond_to do |format|
       if @list.update_attributes(list_params)
-        format.html { redirect_to(:root, notice: "User was successfully updated.") }
+        format.html { redirect_to(:root, notice: "リスト名を変更しました。") }
         format.json { respond_with_bip(@list) }
       else
         @list.valid?

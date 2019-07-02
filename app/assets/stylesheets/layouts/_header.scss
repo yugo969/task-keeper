@@ -70,7 +70,17 @@
           li {
             height: 80px;
             line-height: 80px;
-            .listNew{
+            .userEdit {
+              &:before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f4fe";
+                display: inline-block;
+                margin-right: 0.5rem;
+                font-size: 20px;
+                font-weight: 900;
+              }
+            }
+            .listNew {
               &:before {
                 font-family: "Font Awesome 5 Free";
                 content: "\f044";
@@ -79,7 +89,7 @@
                 font-size: 20px;
               }
             }
-            .logOut{
+            .logOut {
               &:before {
                 font-family: "Font Awesome 5 Free";
                 content: "\f2f5";

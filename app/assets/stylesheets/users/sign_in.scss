@@ -10,19 +10,39 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    max-width: 500px;
+    
     .title {
       color: #efefef;
       margin: 0 auto 40px;
       font-size: 1.4rem;
       text-align: center;
     }
-    .new_user {
+    .error_field {
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+      max-width: 500px;
+      margin: 0 auto 0.6rem;
+      padding: 0.3rem 1rem;
+      color: #dc1b2d;
+      text-align: center;
+      p {
+        margin: 0;
+      }
+    }
+    .new_user, .edit_user {
       color: #efefef;
       .form-group {
         font-size: 0.8rem;
         max-width: 500px;
         margin: 0 auto 1rem;
-        &:nth-last-of-type(2)  { margin: 0!important; }
+        &:nth-last-of-type(2)  { margin: 0 auto!important; }
+        .field_with_errors {
+          display: initial;
+          input {
+            @extend .is-invalid;
+          }
+        }
         .form-control {
           background: #f6f8fa;
         }
@@ -37,7 +57,7 @@
       text-align: center;
       letter-spacing: .1rem;
       border: none;
-      margin: 40px auto;
+      margin: 40px auto 8px;
       opacity: 1;
       transition: opacity .5s;
       cursor: pointer;
@@ -45,21 +65,8 @@
         opacity: .7;
       }
     }
-      // text-align: center;
-      // .submitBtn {
-      //   max-width: 200px;
-      //   margin: 0 auto;
-      //   background: #026aa7;
-      //   padding: 7px;
-      //   border: none;
-      //   border-radius: 22px;
-      //   color: #fff;
-      //   transition: opacity .5s;
-      //   text-decoration: none;
-
-    
     .acountPage_link {
-      margin: 40px auto 0;
+      margin: 8px auto 0;
       a {
         color: #a9a9a9;
       }

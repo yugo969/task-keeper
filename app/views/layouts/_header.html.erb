@@ -1,7 +1,7 @@
 <header class="header">
   <nav class="nav fixed-top">
     <ul class="header_menu">
-      <li class="header_menu_title"><%= link_to "trello-like..", root_path, class: "nav-link" %></li>
+      <li class="header_menu_title"><%= link_to "Task keeper", root_path, class: "nav-link" %></li>
       <li>
 
         <button type="button" class="drawer-toggle drawer-hamburger">
@@ -12,9 +12,12 @@
         <nav class="drawer-nav">
           <ul class="drawer-menu">
               <li><%= current_user.name %>さん</li>
+              <li><%= link_to "アカウント編集", edit_user_registration_path, class: "drawer-menu-item nav-link userEdit" %></li>
+              <% if request.path != '/users/edit' %>
               <li><%= link_to "リスト作成", new_list_path, remote: true, class: "drawer-menu-item nav-link listNew" %></li>
+              <% end %>
               
-              <li><%= link_to "ログアウト", destroy_user_session_path, class: "drawer-menu-item nav-link logOut", method: :delete %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, class: "drawer-menu-item nav-link logOut", data: {"turbolinks" => false}, method: :delete %></li>
           </ul>
         </nav>
         
